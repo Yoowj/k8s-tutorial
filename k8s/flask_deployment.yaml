@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: simple-flask
-          image: yoowj7472/simple-flask:0.3
+          image: yoowj7472/simple-flask:0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 5000

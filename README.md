@@ -1,5 +1,5 @@
-# 간단한 Flask 서버
-실습을  위한 간단한 Flask 서버 입니다.
+# K8S Tutorial By YWJ
+K8S 실습을  위한 간단한 예제입니다.
 
 ## Docker hub 설정
 docker login
