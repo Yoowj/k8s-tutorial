@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: my-ingress.com
+    http:
+      paths:
+      - path: /flask
+        backend:
+          serviceName: flask-service
+          servicePort: 8080
+  - host: my-ingress.com
+    http:
+      paths:
+      - path: /nodejs
+        backend:
+          serviceName: simple-nodejs-service
+          servicePort: 8080
+

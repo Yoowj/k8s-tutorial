@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-nodejs-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      apps: nodejs
+  template:
+    metadata:
+      name: simple-nodejs
+      labels:
+        apps: nodejs
+    spec:
+      containers:
+        - name: nodejs-server
+          image: yoowj7472/simple-nodejs:0.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+
